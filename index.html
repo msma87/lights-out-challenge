@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Viagens Inesquecíveis</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600&display=swap" rel="stylesheet">
+  </head>
+
+  <body>
+    <!-- Site header with logo and theme toggle -->
+    <header class="site-header">
+      <div class="logo">
+        <img src="images/logo.png" alt="Logo Viagens Inesquecíveis" class="logo-svg" />
+      </div>
+
+      <div class="tooltip-container">
+        <label class="switch">
+          <input type="checkbox" id="toggle-theme" />
+          <span class="slider"></span>
+        </label>
+        <div class="switch-caption">Tema do Site</div>
+      </div>
+    </header>
+
+    <!-- Hero section with call to action -->
+    <section class="hero">
+      <div class="hero-content">
+        <h2>Explore o mundo com a gente!</h2>
+        <p>Descubra destinos incríveis, histórias inspiradoras e dicas para sua próxima aventura.</p>
+      </div>
+    </section>
+
+    <!-- Travel cards section -->
+    <section class="destinations">
+      <h2>🌎 Destinos Populares</h2>
+      <div class="cards">
+        <div class="card">
+          <img src="images/paris.jpg" alt="Paris - Torre Eiffel" />
+          <h4>Paris</h4>
+          <p>Descubra o charme eterno da cidade da luz.</p>
+          <a href="#" class="btn">Saiba mais</a>
+        </div>
+
+        <div class="card">
+          <img src="images/rio.jpg" alt="Praia Rio de Janeiro" />
+          <h4>Rio de Janeiro</h4>
+          <p>Sol, praias e paisagens de tirar o fôlego.</p>
+          <a href="#" class="btn">Saiba mais</a>
+        </div>
+
+        <div class="card">
+          <img src="images/tokyo.jpg" alt="Vista noturna de Tokyo" />
+          <h4>Tokyo</h4>
+          <p>Tradição e tecnologia em perfeita harmonia.</p>
+          <a href="#" class="btn">Saiba mais</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- JavaScript functionality -->
+    <script src="scripts.js"></script>
+
+    <!-- Footer message -->
+    <footer class="site-footer">
+      <p>Projeto desenvolvido por <strong>Máira Senna</strong>, como parte de um desafio técnico para vaga de desenvolvedor fullstack.</p>
+    </footer>
+
+    <!-- Popup structure -->
+    <div id="popup-overlay" class="hidden">
+      <div class="popup-content">
+        <div class="popup-icon">ℹ️</div>
+        <h4>Mais informações em breve</h4>
+        <p>Esta seção ainda está em construção. Em breve você poderá explorar mais sobre esse destino!</p>
+        <button id="close-popup">Fechar</button>
+      </div>
+    </div>
+  </body>
+</html>
