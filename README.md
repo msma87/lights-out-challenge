@@ -36,7 +36,7 @@ The page is themed around **Travel** and includes a **Dark Mode / Light Mode tog
 ## 📂 Project Structure
 
 ```
-lights-out-viagens/
+lights-out-challenge/
 ├── index.html         # Main HTML structure
 ├── styles.css         # Theming, layout, responsiveness
 ├── scripts.js         # Theme toggle and modal logic
@@ -50,12 +50,12 @@ lights-out-viagens/
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/lights-out-viagens.git
+   git clone https://github.com/msma87/lights-out-challenge
    ```
 
 2. Navigate to the folder:
    ```bash
-   cd lights-out-viagens
+   cd lights-out-challenge
    ```
 
 3. Open the `index.html` file in your browser:
