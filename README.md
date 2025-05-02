@@ -1,5 +1,7 @@
 # 🌍 Lights Out – Travel Landing Page
 
+🔗 [Live Demo](<https://msma87.github.io/lights-out-challenge/>)
+
 This is a one-page front-end project developed for the "Lights Out" technical challenge.
 The page is themed around **Travel** and includes a **Dark Mode / Light Mode toggle** as its main feature.
 
@@ -68,4 +70,3 @@ lights-out-challenge/
 
 This project was developed as part of a technical assessment for a Fullstack Developer position.
 It was built with attention to detail, responsiveness, and clean code, reflecting my learning journey and growth as a developer.
-
