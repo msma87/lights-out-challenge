@@ -1,23 +1,27 @@
-/* ======================
-   Root Theme Variables
-====================== */
+
+/* ==================================================
+   Variables
+================================================== */
 :root {
-  --bg-color: #ffffff;
-  --text-color: #222222;
-  --accent-color: #0077cc;
-  --card-bg: #e6f0fa;
-  --hero-bg: #f0f8ff;
+  --color-bg: #ffffff;
+  --color-text: #222222;
+  --color-accent: #0077cc;
+  --color-card-bg: #e6f0fa;
+  --color-hero-bg: #f0f8ff;
+  --font-main: 'Outfit', Arial, sans-serif;
 }
 
 body.dark-mode {
-  --bg-color: #121212;
-  --text-color: #f0f0f0;
-  --accent-color: #42a5f5;
-  --card-bg: #1e1e1e;
-  --hero-bg: #1a1a1a;
+  --color-bg: #121212;
+  --color-text: #f0f0f0;
+  --color-accent: #42a5f5;
+  --color-card-bg: #1e1e1e;
+  --color-hero-bg: #1a1a1a;
 }
 
-/* Reset and base styles */
+/* ==================================================
+   Base styles
+================================================== */
 * {
   margin: 0;
   padding: 0;
@@ -25,20 +29,20 @@ body.dark-mode {
 }
 
 body {
-  background-color: var(--bg-color);
-  color: var(--text-color);
-  font-family: 'Outfit', Arial, sans-serif;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-main);
   line-height: 1.6;
   transition: background-color 0.3s, color 0.3s;
 }
 
-/* ======================
+/* ==================================================
    Header
-====================== */
+================================================== */
 .site-header {
   position: sticky;
   top: 0;
-  background-color: var(--bg-color);
+  background-color: var(--color-bg);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -51,16 +55,15 @@ body {
 .logo-svg {
   height: 48px;
   transition: filter 0.3s ease;
-  filter: invert(0);
 }
 
 body.dark-mode .logo-svg {
   filter: invert(1);
 }
 
-/* ======================
+/* ==================================================
    Theme Switch
-====================== */
+================================================== */
 .switch {
   position: relative;
   display: inline-block;
@@ -87,22 +90,17 @@ body.dark-mode .logo-svg {
 .slider::before {
   content: "";
   position: absolute;
-  height: 20px; width: 20px;
-  left: 4px; bottom: 4px;
+  height: 20px;
+  width: 20px;
+  left: 4px;
+  bottom: 4px;
   background-color: white;
   border-radius: 50%;
   transition: transform 0.3s;
 }
 
-.tooltip-container {
-  position: relative;
-  display: inline-flex;
-  flex-direction: column;
-  align-items: center;
-}
-
 input:checked + .slider {
-  background-color: var(--accent-color);
+  background-color: var(--color-accent);
 }
 
 input:checked + .slider::before {
@@ -111,15 +109,15 @@ input:checked + .slider::before {
 
 .switch-caption {
   font-size: 0.7rem;
-  text-align: center;
-  color: var(--text-color);
+  color: var(--color-text);
   opacity: 0.6;
   margin-top: 4px;
+  text-align: center;
 }
 
-/* ======================
+/* ==================================================
    Hero Section
-====================== */
+================================================== */
 .hero {
   display: flex;
   justify-content: center;
@@ -151,7 +149,6 @@ input:checked + .slider::before {
   margin: 0 auto;
 }
 
-
 .hero h2 {
   font-size: 2rem;
   margin-bottom: 1rem;
@@ -164,9 +161,9 @@ input:checked + .slider::before {
   margin: 0 auto;
 }
 
-/* ======================
-   Destination Cards
-====================== */
+/* ==================================================
+   Cards
+================================================== */
 .destinations {
   padding: 1.5rem 1rem;
   text-align: center;
@@ -184,7 +181,7 @@ input:checked + .slider::before {
 }
 
 .card {
-  background-color: var(--card-bg);
+  background-color: var(--color-card-bg);
   padding: 1.5rem;
   border-radius: 8px;
   width: 280px;
@@ -197,10 +194,6 @@ input:checked + .slider::before {
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
-.card h4 {
-  margin-bottom: 0.5rem;
-}
-
 .card img {
   width: 100%;
   height: 160px;
@@ -209,37 +202,43 @@ input:checked + .slider::before {
   margin-bottom: 1rem;
 }
 
-.btn {
+/* ==================================================
+   Button
+================================================== */
+.btn,
+.popup-content button {
   display: inline-block;
   margin-top: 1rem;
   padding: 0.5rem 1rem;
-  background-color: var(--accent-color);
+  background-color: var(--color-accent);
   color: white;
   border-radius: 4px;
   text-decoration: none;
   font-size: 0.9rem;
+  border: none;
+  cursor: pointer;
   transition: background-color 0.3s;
 }
 
-.btn:hover {
+.btn:hover,
+.popup-content button:hover {
   background-color: #005fa3;
 }
 
-/* ======================
+/* ==================================================
    Footer
-====================== */
+================================================== */
 .site-footer {
   text-align: center;
-  padding: 0.5rem;
+  padding: 1rem;
   font-size: 0.85rem;
-  color: var(--text-color);
+  color: var(--color-text);
   opacity: 0.6;
-  margin-top: auto;
 }
 
-/* ======================
-   Popup Overlay
-====================== */
+/* ==================================================
+   Popup
+================================================== */
 #popup-overlay {
   position: fixed;
   top: 0; left: 0;
@@ -261,8 +260,8 @@ input:checked + .slider::before {
 }
 
 .popup-content {
-  background: var(--bg-color);
-  color: var(--text-color);
+  background: var(--color-bg);
+  color: var(--color-text);
   padding: 2.5rem 2rem;
   border-radius: 10px;
   text-align: center;
@@ -271,7 +270,6 @@ input:checked + .slider::before {
   width: 90%;
   font-size: 1rem;
   line-height: 1.5;
-  position: relative;
 }
 
 .popup-icon {
@@ -285,47 +283,21 @@ input:checked + .slider::before {
   font-weight: 600;
 }
 
-.popup-content button {
-  margin-top: 2rem;
-  padding: 0.6rem 1.4rem;
-  background: var(--accent-color);
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background 0.3s;
-  font-size: 0.9rem;
-}
-
-.popup-content button:hover {
-  background: #005fa3;
-}
-
 .hidden {
   display: none;
 }
 
-/* ======================
-   Responsive Adjustments
-====================== */
+/* ==================================================
+   Responsive
+================================================== */
 @media (max-width: 768px) {
   .hero {
     padding: 3rem 1rem;
-    min-height: 50vh;
-    max-width: 100%;
   }
 
   .cards {
     flex-direction: column;
     align-items: center;
-  }
-
-  .site-header {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 1.5rem;
-    gap: 1rem;
   }
 }
 
@@ -334,14 +306,9 @@ input:checked + .slider::before {
     padding: 2.5rem 1rem;
     font-size: 0.95rem;
   }
+
   .popup-content {
     padding: 2rem 1rem;
     font-size: 0.95rem;
-  }
-
-  @media (max-width: 480px) {
-    .site-footer {
-      padding-bottom: 2rem;
-    }
   }
 }

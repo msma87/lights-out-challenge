@@ -67,5 +67,5 @@ lights-out-viagens/
 ## 👩‍💻 About the Developer
 
 This project was developed as part of a technical assessment for a Fullstack Developer position.
-It was built with attention to detail, responsiveness, and clean code — reflecting my learning journey and growth as a developer.
+It was built with attention to detail, responsiveness, and clean code, reflecting my learning journey and growth as a developer.
 
